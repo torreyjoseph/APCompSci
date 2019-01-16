@@ -1,0 +1,19 @@
+/Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/bin/java "-javaagent:/Users/joseph/Desktop/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=51546:/Users/joseph/Desktop/IntelliJ IDEA CE.app/Contents/bin" -Dfile.encoding=UTF-8 -classpath /Users/joseph/IdeaProjects/PalindromeTester/out/production/PalindromeTester Main
+
+Sorry, 'Palindrome' isn't a palindrome.
+
+Wow, 'Civic' is a palindrome!
+
+Wow, 'Radar' is a palindrome!
+
+Wow, 'Level' is a palindrome!
+
+Wow, 'Eva, can I stab bats in a cave?' is a palindrome!
+
+Wow, 'A man, a plan, a canal, Panama' is a palindrome!
+
+Wow, 'Never odd or even' is a palindrome!
+
+Wow, 'Doc, note: I dissent. A fast never prevents a fatness. I diet on cod.' is a palindrome!
+
+Process finished with exit code 0
