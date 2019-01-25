@@ -1,0 +1,10 @@
+/Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/bin/java "-javaagent:/Users/joseph/Desktop/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=60266:/Users/joseph/Desktop/IntelliJ IDEA CE.app/Contents/bin" -Dfile.encoding=UTF-8 -classpath /Users/joseph/IdeaProjects/Election'd/out/production/Election'd Main
+╔═╦════════════════════════╦═╗
+║✭║    ELECTION RESULTS    ║✭║
+║✭║ President: Golding     ║✭║
+║✭║ Vice-President: Sarkar ║✭║
+║✭║ Secretary: Howard      ║✭║
+║✭║ Treasurer: Ritscher    ║✭║
+╚═╩════════════════════════╩═╝
+
+Process finished with exit code 0
