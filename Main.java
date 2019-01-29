@@ -40,20 +40,20 @@ public class Main {
                 ",3,3,3,4;355132,1,4,3,1;103042,1,2,3,1;481606,1,2,4,2;345578,1,1,2,3;238947,4,4,1,2;473687,2,4,2,3;159439" +
                 ",3,3,3,1;429067,4,3,3,4;444958,3,4,4,4;474788,2,2,1,3;159366,2,2,2,1;397544,4,4,4,1;407677,1,2,2,3";
         String[] Results = rawResults.split(";");
-        int[] PreBallot = new int[5 * Results.length];
-        for (int i = 0; i < 5 * Results.length; i = i + 5) {
-            String[] Ballot = Results[i / 5].split(",");
+        int[][] PreBallot = new int[5][Results.length];
+        for (int i = 0; i < Results.length; i++) {
+            String[] Ballot = Results[i].split(",");
             for (int j = 0; j < 5; j++) {
-                PreBallot[i + j] = Integer.parseInt(Ballot[j]);
+                PreBallot[j][i] = Integer.parseInt(Ballot[j]);
             }
         }
-        for (int i = 0; i < 5 * Results.length; i = i + 5) {
-            for (int j = 0; j < 5 * Results.length; j = j + 5) {
-                if (PreBallot[i] == PreBallot[j] && i != j) {
-                    PreBallot[i + 1] = 0;
-                    PreBallot[i + 2] = 0;
-                    PreBallot[i + 3] = 0;
-                    PreBallot[i + 4] = 0;
+        for (int i = 0; i < Results.length; i++) {
+            for (int j = 0; j < Results.length; j++) {
+                if (PreBallot[0][i] == PreBallot[0][j] && i != j) {
+                    PreBallot[1][i] = 0;
+                    PreBallot[2][i] = 0;
+                    PreBallot[3][i] = 0;
+                    PreBallot[4][i] = 0;
                 }
             }
         }
@@ -74,14 +74,14 @@ public class Main {
         int BennetCount = 0;
         int RitscherCount = 0;
         int HurleyCount = 0;
-        for (int x = 1; x < 5 * Results.length; x = x + 5) {
-            if (PreBallot[x] == 1)
+        for (int x = 0; x < Results.length; x++) {
+            if (PreBallot[1][x] == 1)
                 GoldingCount++;
-            else if (PreBallot[x] == 2)
+            else if (PreBallot[1][x] == 2)
                 GotshalkCount++;
-            else if (PreBallot[x] == 3)
+            else if (PreBallot[1][x] == 3)
                 EvansCount++;
-            else if (PreBallot[x] == 4)
+            else if (PreBallot[1][x] == 4)
                 VillalobosCount++;
         }
         int President = GoldingCount;
@@ -99,14 +99,14 @@ public class Main {
         else {
             System.out.println("║✭║ President: Golding     ║✭║");
         }
-        for (int x = 2; x < 5 * Results.length; x = x + 5) {
-            if (PreBallot[x] == 1)
+        for (int x = 1; x < Results.length; x++) {
+            if (PreBallot[2][x] == 1)
                 SarkarCount++;
-            else if (PreBallot[x] == 2)
+            else if (PreBallot[2][x] == 2)
                 AhnCount++;
-            else if (PreBallot[x] == 3)
+            else if (PreBallot[2][x] == 3)
                 CampCount++;
-            else if (PreBallot[x] == 4)
+            else if (PreBallot[2][x] == 4)
                 LeBlancCount++;
         }
         int VP = SarkarCount;
@@ -124,14 +124,14 @@ public class Main {
         else {
             System.out.println("║✭║ Vice-President: Sarkar ║✭║");
         }
-        for (int x = 3; x < 5 * Results.length; x = x + 5) {
-            if (PreBallot[x] == 1)
+        for (int x = 2; x < Results.length; x++) {
+            if (PreBallot[3][x] == 1)
                 HowardCount++;
-            else if (PreBallot[x] == 2)
+            else if (PreBallot[3][x] == 2)
                 RubinoCount++;
-            else if (PreBallot[x] == 3)
+            else if (PreBallot[3][x] == 3)
                 FisherCount++;
-            else if (PreBallot[x] == 4)
+            else if (PreBallot[3][x] == 4)
                 EddeCount++;
         }
         int Secretary = HowardCount;
@@ -149,14 +149,14 @@ public class Main {
         else {
             System.out.println("║✭║ Secretary: Howard      ║✭║");
         }
-        for (int x = 4; x < 5 * Results.length; x = x + 5) {
-            if (PreBallot[x] == 1)
+        for (int x = 3; x < Results.length; x++) {
+            if (PreBallot[4][x] == 1)
                 GassnerCount++;
-            else if (PreBallot[x] == 2)
+            else if (PreBallot[4][x] == 2)
                 BennetCount++;
-            else if (PreBallot[x] == 3)
+            else if (PreBallot[4][x] == 3)
                 RitscherCount++;
-            else if (PreBallot[x] == 4)
+            else if (PreBallot[4][x] == 4)
                 HurleyCount++;
         }
         int Treasurer = GassnerCount;
