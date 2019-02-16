@@ -1,0 +1,24 @@
+/Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/bin/java "-javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=52850:/Applications/IntelliJ IDEA CE.app/Contents/bin" -Dfile.encoding=UTF-8 -classpath /Users/joseph/IdeaProjects/Number'd/out/production/Number'd Main
+Binary (0, 1, 63, 127, 255, and 256, respectively):
+000000000
+000000001
+000111111
+001111111
+011111111
+100000000
+Octal (0, 1, 63, 127, 255, and 256, respectively):
+000000000
+000000001
+000000077
+000000177
+000000377
+000000400
+Hexadecimal (0, 1, 63, 127, 255, and 256, respectively):
+000000000
+000000001
+0000000315
+0000000715
+00000001515
+000000100
+
+Process finished with exit code 0
