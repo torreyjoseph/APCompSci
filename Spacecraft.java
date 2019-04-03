@@ -12,7 +12,7 @@ public abstract class Spacecraft {
         int num = stat.nextInt(max - min) + min;
         return num;
     }
-    protected void shipStats() {
+    public void shipStats() {
         System.out.printf("NTSC %-12s (%-5s): " +
                         "HULL PLATING: %d | SHIELD STRENGTH: %d | BEAM POWER: %d | TORPEDOES: %d\n",
                 shipRegistry, shipClass, hullPlating, shieldDschrg, beamPwr, torpedoes);
