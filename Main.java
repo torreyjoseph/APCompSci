@@ -1,104 +1,60 @@
 import java.util.ArrayList;
+
 public class Main {
 
     public static void main(String[] args) {
-        /*System.out.println("  0: (Binary) " + toBinary(0) + " (Octal) " + toOctal(0) + " (Hexadecimal) " + toHex(0));
-        System.out.println("  1: (Binary) " + toBinary(1) + " (Octal) " + toOctal(1) + " (Hexadecimal) " + toHex(1));
-        System.out.println(" 63: (Binary) " + toBinary(63) + " (Octal) " + toOctal(63) + " (Hexadecimal) " + toHex(63));
-        System.out.println("127: (Binary) " + toBinary(127) + " (Octal) " + toOctal(127) + " (Hexadecimal) " + toHex(127));
-        System.out.println("255: (Binary) " + toBinary(255) + " (Octal) " + toOctal(255) + " (Hexadecimal) " + toHex(255));
-        System.out.println("256: (Binary) " + toBinary(256) + " (Octal) " + toOctal(256) + " (Hexadecimal) " + toHex(256));*/
-        System.out.println("Binary (0, 1, 63, 127, 255, and 256, respectively):");
-        toBinary(0);
-        toBinary(1);
-        toBinary(63);
-        toBinary(127);
-        toBinary(255);
-        toBinary(256);
-        System.out.println("Octal (0, 1, 63, 127, 255, and 256, respectively):");
-        toOctal(0);
-        toOctal(1);
-        toOctal(63);
-        toOctal(127);
-        toOctal(255);
-        toOctal(256);
-        System.out.println("Hexadecimal (0, 1, 63, 127, 255, and 256, respectively):");
-        toHex(0);
-        toHex(1);
-        toHex(63);
-        toHex(127);
-        toHex(255);
-        toHex(256);
-    }
-    public static ArrayList<Integer> toBinary(int dec){
-        ArrayList<Integer> binary = new ArrayList<>();
-        binary.add(0);
-        binary.add(0);
-        binary.add(0);
-        binary.add(0);
-        binary.add(0);
-        binary.add(0);
-        binary.add(0);
-        binary.add(0);
-        binary.add(0);
-        int preBinary;
-        for (int i = 8; i >= 0; i--) {
-            preBinary = dec % 2;
-            binary.set(i, preBinary);
-            dec = dec / 2;
+        System.out.println("\nTactical Fleet Roster:\n* * * * * * * * * * *");
+        ArrayList<Spacecraft> starFleet = new ArrayList<>();
+        starFleet.add(new Escort ("Gagarin"));
+        starFleet.add(new Escort("Tereshkova"));
+        starFleet.add(new Escort("Armstrong"));
+        starFleet.add(new Escort("Aldrin"));
+        starFleet.add(new Escort ("Méndez"));
+        starFleet.add(new Frigate("Danube"));
+        starFleet.add(new Frigate("Mississippi"));
+        starFleet.add(new Frigate("Rio Grande"));
+        starFleet.add(new Frigate("Mekong"));
+        starFleet.add(new Frigate("Volga"));
+        starFleet.add(new Cruiser("Andromeda"));
+        starFleet.add(new Cruiser("Carina"));
+        starFleet.add(new Cruiser("Hercules"));
+        starFleet.add(new Cruiser("Cepheus"));
+        starFleet.add(new Cruiser("Cassiopeia"));
+        starFleet.add(new Battleship("Aegis"));
+        starFleet.add(new Battleship("Valiant"));
+        starFleet.add(new Battleship("Gallant"));
+        starFleet.add(new Battleship("Endurance"));
+        starFleet.add(new Battleship("Resolute"));
+
+        System.out.println("\nDefensive Fleet:\n* * * * * * * * *");
+        ArrayList<DefensiveCraft> defFleet = new ArrayList<>();
+        for (int i = 0; i < 4; i++) {
+            int totStat = 0;
+            int max = 0;
+            for (int j = 0; j < starFleet.size(); j++) {
+                if ((starFleet.get(j).hullPlating + starFleet.get(j).shieldDschrg) > totStat && starFleet.get(j) instanceof DefensiveCraft) {
+                    totStat = starFleet.get(j).hullPlating + starFleet.get(j).shieldDschrg;
+                    max = j;
+                }
+            }
+            defFleet.add((DefensiveCraft) starFleet.remove(max));
         }
-        for (int i = 0; i <= 8; i++) {
-            int result = binary.get(i);
-            System.out.print(result);
+
+        System.out.println("\nOffensive Fleet:\n* * * * * * * * *");
+        ArrayList<OffensiveCraft> offFleet = new ArrayList<>();
+        for (int i = 0; i < 4; i++) {
+            int totStat = 0;
+            int max = 0;
+            for (int j = 0; j < starFleet.size(); j++) {
+                if ((starFleet.get(j).hullPlating + starFleet.get(j).shieldDschrg) > totStat && starFleet.get(j) instanceof DefensiveCraft) {
+                    totStat = starFleet.get(j).hullPlating + starFleet.get(j).shieldDschrg;
+                    max = j;
+                }
+            }
+            offFleet.add((OffensiveCraft) starFleet.remove(max));
         }
-        System.out.println();
-        return binary;
-    }
-    public static ArrayList<Integer> toOctal(int dec){
-        ArrayList<Integer> octal = new ArrayList<>();
-        octal.add(0);
-        octal.add(0);
-        octal.add(0);
-        octal.add(0);
-        octal.add(0);
-        octal.add(0);
-        octal.add(0);
-        octal.add(0);
-        octal.add(0);
-        int preOctal;
-        for (int i = 8; i >= 0; i--) {
-            preOctal = dec % 8;
-            octal.set(i, preOctal);
-            dec = dec / 8;
-        }
-        for (int i = 0; i <= 8; i++) {
-            int result = octal.get(i);
-            System.out.print(result);
-        }
-        System.out.println();
-        return octal;
-    }
-    public static ArrayList<Integer> toHex(int dec) {
-        ArrayList<Integer> hex = new ArrayList<>();
-        hex.add(0);
-        hex.add(0);
-        hex.add(0);
-        hex.add(0);
-        hex.add(0);
-        hex.add(0);
-        hex.add(0);
-        hex.add(0);
-        hex.add(0);
-        int preHex;
-        for (int i = 8; i >= 0; i--) {
-            preHex = dec % 16;
-            hex.set(i, preHex);
-            dec = dec / 16;
-        }
-        for (int i = 0; i <= 8; i++) {
-            int result = hex.get(i);
-            System.out.print(result);
-        }
-        System.out.println();        return hex;
+        /*for (OffensiveCraft ship : offFleet) {
+            ship.shipStats();
+        }*/
     }
 }
