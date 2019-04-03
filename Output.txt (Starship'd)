@@ -1,0 +1,34 @@
+/Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/bin/java "-javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=62568:/Applications/IntelliJ IDEA CE.app/Contents/bin" -Dfile.encoding=UTF-8 -classpath /Users/joseph/IdeaProjects/Starship'd/out/production/Starship'd Main
+
+Tactical Fleet Roster:
+* * * * * * * * * * *
+NTSC Gagarin      (Escrt): HULL PLATING: 1195 | SHIELD STRENGTH: 3434 | BEAM POWER: 2506 | TORPEDOES: 13
+NTSC Tereshkova   (Escrt): HULL PLATING: 1240 | SHIELD STRENGTH: 3139 | BEAM POWER: 2667 | TORPEDOES: 18
+NTSC Armstrong    (Escrt): HULL PLATING: 1170 | SHIELD STRENGTH: 3229 | BEAM POWER: 2640 | TORPEDOES: 16
+NTSC Aldrin       (Escrt): HULL PLATING: 1128 | SHIELD STRENGTH: 2677 | BEAM POWER: 2822 | TORPEDOES: 10
+NTSC Méndez       (Escrt): HULL PLATING: 1164 | SHIELD STRENGTH: 2937 | BEAM POWER: 2747 | TORPEDOES: 17
+NTSC Danube       (Frgte): HULL PLATING: 1934 | SHIELD STRENGTH: 2048 | BEAM POWER: 2809 | TORPEDOES: 27
+NTSC Mississippi  (Frgte): HULL PLATING: 1595 | SHIELD STRENGTH: 2437 | BEAM POWER: 2501 | TORPEDOES: 29
+NTSC Rio Grande   (Frgte): HULL PLATING: 1813 | SHIELD STRENGTH: 2088 | BEAM POWER: 2782 | TORPEDOES: 25
+NTSC Mekong       (Frgte): HULL PLATING: 1609 | SHIELD STRENGTH: 2273 | BEAM POWER: 2628 | TORPEDOES: 21
+NTSC Volga        (Frgte): HULL PLATING: 1592 | SHIELD STRENGTH: 2438 | BEAM POWER: 3133 | TORPEDOES: 25
+NTSC Andromeda    (Crusr): HULL PLATING: 2369 | SHIELD STRENGTH: 2006 | BEAM POWER: 3894 | TORPEDOES: 24
+NTSC Carina       (Crusr): HULL PLATING: 2379 | SHIELD STRENGTH: 2367 | BEAM POWER: 3961 | TORPEDOES: 34
+NTSC Hercules     (Crusr): HULL PLATING: 2171 | SHIELD STRENGTH: 2243 | BEAM POWER: 3840 | TORPEDOES: 32
+NTSC Cepheus      (Crusr): HULL PLATING: 2335 | SHIELD STRENGTH: 2223 | BEAM POWER: 3631 | TORPEDOES: 20
+NTSC Cassiopeia   (Crusr): HULL PLATING: 2300 | SHIELD STRENGTH: 2175 | BEAM POWER: 3467 | TORPEDOES: 26
+NTSC Aegis        (Btlsh): HULL PLATING: 3499 | SHIELD STRENGTH: 1873 | BEAM POWER: 4630 | TORPEDOES: 46
+NTSC Valiant      (Btlsh): HULL PLATING: 4446 | SHIELD STRENGTH: 1781 | BEAM POWER: 4326 | TORPEDOES: 47
+NTSC Gallant      (Btlsh): HULL PLATING: 4618 | SHIELD STRENGTH: 1983 | BEAM POWER: 4728 | TORPEDOES: 47
+NTSC Endurance    (Btlsh): HULL PLATING: 3171 | SHIELD STRENGTH: 1576 | BEAM POWER: 4286 | TORPEDOES: 49
+NTSC Resolute     (Btlsh): HULL PLATING: 4156 | SHIELD STRENGTH: 1584 | BEAM POWER: 4747 | TORPEDOES: 41
+
+Defensive Fleet:
+* * * * * * * * *
+
+Offensive Fleet:
+* * * * * * * * *
+Exception in thread "main" java.lang.ClassCastException: Frigate cannot be cast to OffensiveCraft
+	at Main.main(Main.java:54)
+
+Process finished with exit code 1
